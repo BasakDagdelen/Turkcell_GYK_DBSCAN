@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from samples import country_segmentation, plot_country_segmentation
-from samples import customer_segmentation, plot_segmentation
-from samples import product_segmentation, plot_product_segmentation
-from samples import supplier_segmentation, plot_supplier_segmentation
+from samples.country_analysis import country_segmentation, plot_country_segmentation
+from samples.customer_segmentation import customer_segmentation, plot_segmentation
+from samples.product_clustering import product_segmentation, plot_product_segmentation
+from samples.supplier_segmentation import supplier_segmentation, plot_supplier_segmentation
 from fastapi.responses import JSONResponse
 
 
