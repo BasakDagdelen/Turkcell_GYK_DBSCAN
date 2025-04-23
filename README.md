@@ -33,3 +33,33 @@ Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 2. **Veritabanı bağlantısı:**
 
     PostgreSQL veritabanı bağlantısını ayarlamanız gerekir. database.py dosyasındaki bağlantı bilgilerini kendi veritabanı sunucunuza göre güncelleyin.
+   
+      ```bash
+   user = 'kullanıcı_adı'
+   password = 'şifre'
+   host = 'localhost'
+   port = 5432
+   database = 'veritabani_adı'
+
+3. **Veritabanı tabloları:**
+
+    Bu projede kullanılan `customers`, `orders`, `order_details`, `products` ve `suppliers` tablolara sahip bir **PostgreSQL** veritabanına ihtiyacımız vardır. 
+
+ 
+## Proje Klasör Yapısı
+  
+### `samples` Klasörü İçeriği
+
+Her bir Python dosyası, belirli bir veri madenciliği problemine yönelik analiz ve kümeleme işlemlerini içermektedir:
+
+- **`country_segmentation.py`**:  
+  Ülkeler arası satış deseni analizini gerçekleştirir ve DBSCAN algoritmasıyla kümeler oluşturur.
+
+- **`customer_segmentation.py`**:  
+  Müşteri verilerini kullanarak alışveriş davranışlarını analiz eder, kümeler ve aykırı verileri tespit eder.
+
+- **`product_clustering.py`**:  
+  Ürünlerin sipariş geçmişine göre gruplandırılmasını sağlar ve niş ürünleri tanımlar.
+
+- **`supplier_segmentation.py`**:  
+  Tedarikçileri, sağladıkları ürünlerin satış performansına göre segmentlere ayırır.
