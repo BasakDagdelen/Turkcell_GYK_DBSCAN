@@ -16,8 +16,8 @@ Her bir problem için DBSCAN algoritması kullanılarak veriler kümelenmiş ve 
 - [Kurulum](#kurulum)
 - [Proje Yapısı](#proje-yapısı)
 - [Kullanım](#kullanım)
-- [API Sonuçları](#api-sonuçları)
 - [Teknolojiler](#teknolojiler)
+- [Görseller](#görseller)
 
 ## Kurulum
 
@@ -46,11 +46,13 @@ Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
     Bu projede kullanılan `customers`, `orders`, `order_details`, `products` ve `suppliers` tablolara sahip bir **PostgreSQL** veritabanına ihtiyacımız vardır. 
 
  
-## Proje Klasör Yapısı
+## Proje Yapısı
+![image](https://github.com/user-attachments/assets/f2692384-0e32-4146-a811-0e10d7f714af)
+
   
 ### `samples` Klasörü İçeriği
 
-Her bir Python dosyası, belirli bir veri madenciliği problemine yönelik analiz ve kümeleme işlemlerini içermektedir:
+Her bir Python dosyası, belirli bir probleme yönelik analiz ve kümeleme işlemlerini içermektedir:
 
 - **`country_segmentation.py`**:  
   Ülkeler arası satış deseni analizini gerçekleştirir ve DBSCAN algoritmasıyla kümeler oluşturur.
@@ -63,3 +65,56 @@ Her bir Python dosyası, belirli bir veri madenciliği problemine yönelik anali
 
 - **`supplier_segmentation.py`**:  
   Tedarikçileri, sağladıkları ürünlerin satış performansına göre segmentlere ayırır.
+
+
+## Kullanım
+Proje çalıştırıldığında FastAPI uygulaması başlatılır. API'yi kullanarak dört farklı segmentasyon probleminin çözümlerine ve görselleştirmelere erişebilirsiniz.
+
+1. **API'yi çalıştırma:**
+
+   FastAPI uygulamasını başlatmak için terminalde şu komutu kullanabilirsiniz.  
+
+    ```bash
+   uvicorn api:app --reload
+
+2. **API'yi kullanma:**
+
+   API'deki her bir uç noktaya şu URL'leri kullanarak erişebilirsiniz:
+
+- **Ülkelere Göre Satış Deseni Analizi:**  Bu endpoint, ülkelere göre satış deseni analizi yapacak ve kümelenmiş verileri döndürecektir.
+ 
+    ```bash
+   GET /country-analysis
+
+- **Müşteri Segmentasyonu:** Bu endpoint, müşteri verilerini analiz ederek segmentlere ayırır ve aykırı müşteri verilerini döndürür.
+
+    ```bash
+   GET /customer-segmentation
+
+- **Ürün Kümeleme:** Ürünleri, satış geçmişlerine göre gruplar ve niş ürünleri tespit eder.
+
+    ```bash
+   GET /product-segmentation
+
+ - **Tedarikçi Segmentasyonu:** Tedarikçilerin sağladıkları ürünlerin satış performansına göre kümeleme işlemi gerçekleştirir.
+
+    ```bash
+   GET /supplier-segmentation
+
+
+## Teknolojiler
+Bu projede aşağıdaki teknolojiler kullanılmıştır:
+
+- Python 3.8+
+
+- FastAPI: API sunucusu
+
+- PostgreSQL: Veritabanı
+
+- DBSCAN: Kümeleme algoritması
+
+- scikit-learn: Veri madenciliği için gerekli araçlar
+
+- Matplotlib: Veri görselleştirmeleri
+
+- SQLAlchemy: Veritabanı bağlantısı için ORM
