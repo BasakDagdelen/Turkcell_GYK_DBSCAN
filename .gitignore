@@ -1,0 +1,55 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Cython debug symbols
+cython_debug/
+
+# VS Code editor files
+.vscode/
+
+# PyCharm editor files
+.idea/
+
+# Jupyter Notebook checkpoint files
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+
+# Test / coverage reports
+*.coveragerc
+.coverage
+coverage.xml
+*.hypothesis/
+nosetests.xml
+coverage-html/
+
+# Flask/Django related
+instance/
+.webassets-cache
+
+# MySQL / PostgreSQL
+*.sql
+*.sqlite
+
+# FastAPI
+*.db
+*.log
+
+# Docker-related
+docker-compose.override.yml
+Dockerfile
+
+# PyInstaller
+*.spec
