@@ -11,6 +11,7 @@ Bu proje, dört farklı problemini çözmek için FastAPI tabanlı bir API geli�
 
 Her bir problem için DBSCAN algoritması kullanılarak veriler kümelenmiş ve sıra dışı (outlier) veriler tespit edilmiştir. API, bu segmentasyonlar ve görselleştirmeleri kullanıcılara sunmaktadır.
 
+
 ## İçindekiler
 
 - [Kurulum](#kurulum)
@@ -18,6 +19,7 @@ Her bir problem için DBSCAN algoritması kullanılarak veriler kümelenmiş ve 
 - [Kullanım](#kullanım)
 - [Teknolojiler](#teknolojiler)
 - [Görseller](#görseller)
+
 
 ## Kurulum
 
@@ -45,10 +47,10 @@ Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
     Bu projede kullanılan `customers`, `orders`, `order_details`, `products` ve `suppliers` tablolara sahip bir **PostgreSQL** veritabanına ihtiyacımız vardır. 
 
+
  
 ## Proje Yapısı
-![image](https://github.com/user-attachments/assets/f2692384-0e32-4146-a811-0e10d7f714af)
-
+![image](https://github.com/user-attachments/assets/ae3bdfb6-7c72-412b-8155-ebeaf56898ab)
   
 ### `samples` Klasörü İçeriği
 
@@ -118,3 +120,18 @@ Bu projede aşağıdaki teknolojiler kullanılmıştır:
 - Matplotlib: Veri görselleştirmeleri
 
 - SQLAlchemy: Veritabanı bağlantısı için ORM
+
+## Görseller
+
+- `customer_segmentation.png`
+  
+![image](https://github.com/user-attachments/assets/4b2e9a59-267a-4093-98c3-a6e129997de8)
+
+- `product_segmentation.png`
+  ![image](https://github.com/user-attachments/assets/de28fc4e-21ec-49cd-a7f7-965a466fc987)
+
+- `supplier_segmentation.png`
+ ![image](https://github.com/user-attachments/assets/835018eb-cac9-4835-9e9d-8bcac1fbf1aa)
+
+
+
